@@ -17,12 +17,12 @@ if(mysqli_num_rows($result)>0){
         
             <div class='container col-4 nsl2 justify-content-center' >
               <div class='boox col-12 justify-content-center '>
-                <a href='details.php?library_id=".$row['library_id']."'>
+                <a href='details.php?id=".$row['id']."'>
                   <img style='width:300px; height:350px' src='./pictures/" .$row['photo']."'>
                 </a> 
               </div>
               <div class='text-center nsl2'>
-                <a class='eddt' href='details.php?library_id=".$row['library_id']."'>
+                <a class='eddt' href='details.php?id=".$row['id']."'>
                   <h4>" .$row['title']."</h4>
                   <h4>" .$row['autor_first_name']."</h4>
                 </a>

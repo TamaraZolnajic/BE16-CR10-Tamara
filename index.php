@@ -15,9 +15,9 @@ if (mysqli_num_rows($result) == 0) {
   <img class='card-img' src='pictures/" . $row['photo'] . "'>
     <h4 class='card-title' style='margin-top:4%'>{$row["title"]}</h4>
     <p class='card-text'>{$row["type"]}</p>
-    <a href='details.php?id={$row["library_id"]}' class='btn btn-primary' style='width: 75%; margin-bottom: 10px'>Show details</a>
-    <a href='update.php?id={$row["library_id"]}' class='btn btn-success'>Update</a>
-    <a href='delete.php?id={$row["library_id"]}' class='btn btn-danger'>Delete</a>
+    <a href='details.php?id={$row["id"]}' class='btn btn-primary' style='width: 75%; margin-bottom: 10px'>Show details</a>
+    <a href='update.php?id={$row["id"]}' class='btn btn-success'>Update</a>
+    <a href='delete.php?id={$row["id"]}' class='btn btn-danger'>Delete</a>
   </div>
 </div>";
     }

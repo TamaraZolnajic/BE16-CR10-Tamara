@@ -1,12 +1,10 @@
 <?php 
 require_once 'action/db_connect.php';
-ini_set('display_errors', 1); 
-ini_set('display_startup_errors', 1); 
-error_reporting(E_ALL);
+
 
 if ($_GET['id']) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM Library WHERE library_id = {$id}" ;
+    $sql = "SELECT * FROM Library WHERE id = {$id}" ;
     $result = mysqli_query($conn, $sql);
     $data = mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result) == 1) {

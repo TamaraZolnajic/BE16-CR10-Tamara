@@ -3,11 +3,11 @@
 
 require_once "action/db_connect.php";
 
-$library_id = $_GET["library_id"];
-$sql = "SELECT * from library where library_id = {$library_id}";
+$id = $_GET['id'];
+$sql = "SELECT * FROM Library WHERE id = {$id}";
 // var_dump($sql);
 $result = mysqli_query($conn, $sql);
-
+$body="";
 
 
 
@@ -57,13 +57,12 @@ if(mysqli_num_rows($result)>0){
                 </p>
             </div>
             <div class='col-12' style='margin-bottom:5%'>
-            <a href='update.php?id=".$row['library_id']."'><button class='btn btn-primary' type='button'>Edit</button></a>
-            <a href='delete.php?id=".$row['library_id']."'><button class='btn btn-danger' type='button'>Delete</button></a>
+            <a href='update.php?id=".$row['id']."'><button class='btn btn-primary' type='button'>Edit</button></a>
+            <a href='delete.php?id=".$row['id']."'><button class='btn btn-danger' type='button'>Delete</button></a>
             <a href='index.php'><button class='btn btn-warning' type='button'>Back to Home</button></a>
 
             </div>
         </div>
-        
         
         
         

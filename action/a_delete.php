@@ -6,7 +6,7 @@ if ($_POST) {
     $photo = $_POST['photo'];
     ($photo =="")?: unlink("../pictures/$photo");
 
-    $sql = "DELETE FROM Library WHERE library_id = {$id}";
+    $sql = "DELETE FROM Library WHERE id = {$id}";
     if (mysqli_query($conn, $sql) === TRUE) {
         $class = "success";
         $message = "Successfully Deleted!";

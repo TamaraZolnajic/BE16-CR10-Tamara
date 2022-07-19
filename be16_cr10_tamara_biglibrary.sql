@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2022 at 09:25 PM
+-- Generation Time: Jul 19, 2022 at 10:41 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -30,7 +30,7 @@ USE `be16_cr10_tamara_biglibrary`;
 --
 
 CREATE TABLE `library` (
-  `library_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `title` varchar(30) NOT NULL,
   `photo` varchar(30) NOT NULL,
   `isbnean` int(15) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE `library` (
 -- Dumping data for table `library`
 --
 
-INSERT INTO `library` (`library_id`, `title`, `photo`, `isbnean`, `type`, `autor_first_name`, `autor_last_name`, `publisher_name`, `publisher_addres`, `publisher_date`, `availability`, `short_description`) VALUES
+INSERT INTO `library` (`id`, `title`, `photo`, `isbnean`, `type`, `autor_first_name`, `autor_last_name`, `publisher_name`, `publisher_addres`, `publisher_date`, `availability`, `short_description`) VALUES
 (1, 'Moby Dick', 'mobydick.jpg', 647466575, 'book', 'Herman', 'Melville', 'Richard Bentley', 'UK', 1851, 'available', 'The book is the sailor Ishmael narrative of the obsessive quest of Ahab, captain of the whaling ship pequod, for revenge against Moby Dick, the giant white sperm whale that on the ships previous voyage bit off Ahabs leg at the knee.'),
 (2, 'The Da Vinci Code', 'davinci.jpg', 547475477, 'book', 'Dan', 'Brown', 'Doubleday', 'US', 2003, 'avaliable', 'The Da Vinci Code follows symbologist Robert Langdon and cryptologist Sophie Neveu after a murder in the Louvre Museum in Paris causes them to become involved in a battle between the Priory of Sion and Opus Dei.'),
 (3, 'The Lost Symbol', 'symbol.jpg', 9786747, 'book', 'Dan', 'Brown', 'Transworld', 'UK', 2009, 'reserved', 'When his beloved mentor, Peter Solomon–a prominent Mason and philanthropist–is brutally kidnapped, Langdon realizes his only hope of saving Peter is to accept this mystical invitation and follow wherever it leads him.'),
@@ -70,7 +70,7 @@ INSERT INTO `library` (`library_id`, `title`, `photo`, `isbnean`, `type`, `autor
 -- Indexes for table `library`
 --
 ALTER TABLE `library`
-  ADD PRIMARY KEY (`library_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -80,7 +80,7 @@ ALTER TABLE `library`
 -- AUTO_INCREMENT for table `library`
 --
 ALTER TABLE `library`
-  MODIFY `library_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

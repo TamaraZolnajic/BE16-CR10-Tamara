@@ -4,7 +4,7 @@ require_once 'action/db_connect.php';
 
 if ($_GET['id']) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM Library WHERE library_id = {$id}";
+    $sql = "SELECT * FROM Library WHERE id = {$id}";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 1) {
         $data = mysqli_fetch_assoc($result);
@@ -106,7 +106,7 @@ if ($_GET['id']) {
                                 <td><input class='form-control' type="file" name="photo"  /></td>
                             </tr>
                     <tr>
-                        <input type= "hidden" name= "id" value= "<?php echo $data['library_id'] ?>" /> 
+                        <input type= "hidden" name= "id" value= "<?php echo $data['id'] ?>" /> 
                         <input type= "hidden" name= "photo" value= "<?php echo $data['photo'] ?>" />
                         <td><button class="btn btn-success" type= "submit">Save Changes</button></td>
                         <td><a href= "index.php"><button class="btn btn-primary" type="button">Back</button></a></td>
