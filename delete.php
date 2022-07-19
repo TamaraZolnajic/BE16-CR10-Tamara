@@ -44,23 +44,22 @@ if ($_GET['id']) {
         <?php require_once 'components/boot.php' ?>
         <fieldset>
             <div class="row text-center justify-content-center">
-                <div class="nsl"></div>
-                <div class="col-12 nsl">
-                    <h3>Delete request</h3>
+                <div class="col-12 ">
+                <h1 style="color:red; margin: 5% auto">Delete request</h1>
                 </div>
-                <div class="col-6 nsl">
-                    <div class="dimgbox">
-                        <img class="dimg" src='pictures/<?php echo $photo ?>' alt="<?php echo $title ?>">
+                <div class="col-6 ">
+                    <div>
+                        <img style="width:300px; height:400px; margin: 0 auto 10% auto" src='pictures/<?php echo $photo ?>' alt="<?php echo $photo ?>">
                     </div>
                 </div>
-                <h4 class="text-danger nsl"><?php echo $title?></h4>
-                <h6>Do you really want to delete this product?</h6>
+                <h4 ><?php echo $title?></h4>
+                <h6 style="margin: 2% auto 2% auto">Are you sure you want to delete this product?</h6>
                 <div class="col-12">
                     <form action ="action/a_delete.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $id ?>" />
                         <input type="hidden" name="photo" value="<?php echo $photo ?>" />
-                        <button class="button button2" type="submit">Yes, delete it!</button>
-                        <a href="index.php"><button class="button" type="button">No, go back!</button></a>
+                        <button class="btn btn-success" type="submit">Yes, delete it!</button>
+                        <a href="index.php"><button class="btn btn-danger" type="button">No, go back!</button></a>
                     </form>
 
                 </div>

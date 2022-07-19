@@ -46,7 +46,7 @@ if ($_POST) {
           </tr></table><hr>
         </div>";
       $uploadError = ($photo->error !=0)? $photo->ErrorMessage :'';
-      header("refresh: 2; url= ../index.php");
+      header("refresh: 5; url= ../index.php");
   } else {
       $class = "danger";
       $message = "Error while creating record. Try again: <br>" . $conn->error;
@@ -68,17 +68,11 @@ if ($_POST) {
     
     </head>
     <body>
-        <?php require_once '../components/navigation.php' ?>
+        <?php require_once '../components/boot.php' ?>
             <div class="row text-center justify-content-center">
                 <div class="nsl"></div>
                 <div class="col-12 nsl">
-                    <h3>You are create</h3>
-                </div>
-                <div class="col-6 nsl">
-                    <div class="dimgbox">
-                        
-                    </div>
-                </div>
+                    <h3>You have created</h3>
             </div>
         <div class="container">
 

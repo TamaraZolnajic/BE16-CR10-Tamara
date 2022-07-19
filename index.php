@@ -10,7 +10,7 @@ if (mysqli_num_rows($result) == 0) {
     $body = "No results";
 } else {
     while ($row = mysqli_fetch_assoc($result)) {
-        $body .= "<div class='card' style='width: 22rem; margin: 5% 0 5% 5%; text-align: center'>
+        $body .= "<div class='card' style='width: 22rem; margin: 5% 0 5% 5%; text-align: center; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);'>
   <div class='card-body'>
   <img class='card-img' src='pictures/" . $row['photo'] . "'>
     <h4 class='card-title' style='margin-top:4%'>{$row["title"]}</h4>
@@ -55,6 +55,15 @@ mysqli_close($conn);
         a {
             text-decoration: none !important;
         }
+        @media (max-width: 780px) {
+    .heroh {
+      display: none;
+    }
+    #find-id {
+        font-size: 1rem;
+    }
+    
+}
        
     </style>
 </head>
@@ -80,7 +89,7 @@ mysqli_close($conn);
 </nav>
 <div class=" text-center align-items-center" style="width:100%">
 <img src="pictures/hero.jpg" alt="" class="hero-img">
-<h1 style="color:white;position: absolute; top: 40%; left: 25%; font-size:6rem">Welcome to our Library</h1>
+<h1 class="heroh" style="color:white;position: absolute; top: 40%; left: 25%; font-size:6rem">Welcome to our Library</h1>
   </div>
     <div class="container">
         <h3 id="find-id">Find you favorite book, movie or music: </h3>
@@ -88,7 +97,7 @@ mysqli_close($conn);
             <?= $body ?>
         </div>
         <div class='mb-3'>
-                <a href= "create.php"><button class='btn btn-success d-flex'type="button" style="width:20%; font-size:1.8rem; margin:auto" >ADD TO LIBRARY</button></a>
+                <a href= "create.php"><button class='mediabtn btn btn-success d-flex 'type="button" style="width:20%; justify-content:center; margin:auto" >ADD TO LIBRARY</button></a>
             </div>
     </div>
     <footer class="text-center" style="margin-top: 3%;">

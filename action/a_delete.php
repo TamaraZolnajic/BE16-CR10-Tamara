@@ -4,7 +4,7 @@ require_once 'db_connect.php';
 if ($_POST) {
     $id = $_POST['id'];
     $photo = $_POST['photo'];
-    ($photo =="")?: unlink("../pictures/$picture");
+    ($photo =="")?: unlink("../pictures/$photo");
 
     $sql = "DELETE FROM Library WHERE library_id = {$id}";
     if (mysqli_query($conn, $sql) === TRUE) {
@@ -15,7 +15,7 @@ if ($_POST) {
         $message = "The entry was not deleted due to: <br>" . $conn->error;
     }
     mysqli_close($conn);
-    header("refresh: 2; url= ../index.php");
+    header("refresh: 5; url= ../index.php");
 } else {
     header("location: ../error.php");
 }
